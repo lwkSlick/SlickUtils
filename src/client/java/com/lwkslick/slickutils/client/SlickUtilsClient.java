@@ -6,9 +6,13 @@ import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import org.lwjgl.glfw.GLFW;
+import net.minecraft.client.option.KeyBinding;
+import net.minecraft.util.Identifier;
 
 public class SlickUtilsClient implements ClientModInitializer {
 
+	private static final KeyBinding.Category CATEGORY =
+			KeyBinding.Category.create(Identifier.of("slickutils", "general"));
 	public static KeyBinding openConfigKey;
 
 	@Override
@@ -19,7 +23,7 @@ public class SlickUtilsClient implements ClientModInitializer {
 				"key.slickutils.open_config",
 				InputUtil.Type.KEYSYM,
 				GLFW.GLFW_KEY_RIGHT_SHIFT,
-				"category.slickutils.general"
+				CATEGORY
 		));
 
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
