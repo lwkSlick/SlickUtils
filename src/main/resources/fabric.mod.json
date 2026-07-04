@@ -21,6 +21,9 @@
 		],
 		"client": [
 			"com.lwkslick.slickutils.client.SlickUtilsClient"
+		],
+		"modmenu": [
+			"com.lwkslick.slickutils.client.SlickUtilsModMenu"
 		]
 	},
 	"mixins": [
