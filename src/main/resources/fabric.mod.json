@@ -3,15 +3,16 @@
 	"id": "slickutils",
 	"version": "${version}",
 	"name": "SlickUtils",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A Fabric client-side mod that bundles many small QoL, HUD, and PvP utility toggles into a single lightweight mod with one unified config.",
 	"authors": [
-		"Me!"
+		"lwkSlick"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/lwkSlick/slickutils",
+		"sources": "https://github.com/lwkSlick/slickutils",
+		"issues": "https://github.com/lwkSlick/slickutils/issues"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/slickutils/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -34,5 +35,9 @@
 		"minecraft": "~1.21.11",
 		"java": ">=21",
 		"fabric-api": "*"
+	},
+	"recommends": {
+		"yet_another_config_lib_v3": "*",
+		"modmenu": "*"
 	}
 }
