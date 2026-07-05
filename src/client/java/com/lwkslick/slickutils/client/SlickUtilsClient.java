@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 
 public class SlickUtilsClient implements ClientModInitializer {
 
-	private static final KeyBinding.Category CATEGORY =
+	public static final KeyBinding.Category CATEGORY =
 			KeyBinding.Category.create(Identifier.of("slickutils", "general"));
 	public static KeyBinding openConfigKey;
 
@@ -20,6 +20,7 @@ public class SlickUtilsClient implements ClientModInitializer {
 	public void onInitializeClient() {
 		UpdateChecker.checkAsync();
 		ConfigManager.load();
+		ToggleSneakHandler.register();
 
 		openConfigKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
 				"key.slickutils.open_config",
@@ -37,7 +38,7 @@ public class SlickUtilsClient implements ClientModInitializer {
 		});
 
 		HudRenderCallback.EVENT.register((context, tickCounter) -> {
-			// Module HUD rendering will go here in later steps.
+			FPSDisplayModule.draw(context, tickCounter);
 		});
 	}
 }

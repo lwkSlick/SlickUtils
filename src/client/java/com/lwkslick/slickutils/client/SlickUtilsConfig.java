@@ -15,6 +15,8 @@ public class SlickUtilsConfig {
     public boolean nametagsEnabled = false;
     public boolean scrollClickEnabled = false;
     public boolean armorDisplayEnabled = false;
+    public boolean blockOutlineThick = false;
+    public int blockOutlineColor = 0x66000000;
 
     // --- HUD element position/scale (draggable via Arrange Items) ---
     // FPS Display

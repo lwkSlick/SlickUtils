@@ -3,6 +3,8 @@
 	"package": "com.lwkslick.slickutils.client.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"client": [
+		"EnableFullbrightMixin",
+		"ChangeBlockOutlineMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
